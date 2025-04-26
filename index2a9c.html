@@ -79,6 +79,7 @@ var easy_fancybox_auto = function(){
 }
 /* ]]> */
 </script>
+
 </head>
 
 <body class="page-template-default page page-id-9 page-parent tribe-no-js septera-image-none septera-caption-one septera-totop-normal septera-stripped-table septera-fixed-menu septera-over-menu septera-menu-left septera-responsive-headerimage septera-responsive-featured septera-magazine-two septera-magazine-layout septera-comhide-in-posts septera-comhide-in-pages septera-comment-placeholder septera-hide-page-title septera-hide-cat-title septera-normalizedtags septera-article-animation-slide" itemscope itemtype="http://schema.org/WebPage">
@@ -118,179 +119,222 @@ var easy_fancybox_auto = function(){
 		
 	<div id="container" class="two-columns-left">
 
-		<main id="main" role="main" class="main">
+
 						
 			
-	<article id="post-9" class="post-9 page type-page status-publish hentry">
-		<div class="schema-image">
-					</div>
-		<div class="article-inner">
-			<header>
-				<h1 class="entry-title singular-title" itemprop="headline">Obrazy</h1>				<span class="entry-meta">
-									</span>
-			</header>
+<style>
+.my-slider {
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto 0 auto; /* góra 0 */
+  overflow: hidden;
+  transform: scale(0.7);
+  transform-origin: center center;
+  align-self: flex-start !important; /* NA WSZELKI WYPADEK */
+}
 
-			
-			<div class="entry-content" itemprop="text">
-						<div id="serious-slider-4-rnd7476" class="cryout-serious-slider seriousslider serious-slider-4-rnd7476 cryout-serious-slider-4 seriousslider-overlay2 seriousslider-light seriousslider-fade seriousslider-sizing0 seriousslider-aligncenter seriousslider-caption-animation-slide seriousslider-textstyle-textshadow" data-ride="seriousslider">
-			<div class="seriousslider-inner" role="listbox">
+.my-slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
 
-			
-			<div class="item slide-1 active">
-								<a>
-					<img decoding="async" class="item-image" src="wp-content/uploads/2017/08/xnew_main_slide-e1503817131442.jpg.pagespeed.ic.-ZHztzkf6n.jpg" alt="Cykl Podejścia 2017/2018">
-				</a>
-												<div class="seriousslider-caption">
-					<div class="seriousslider-caption-inside">
-						<h3 class="seriousslider-caption-title"><span>Cykl Podejścia 2017/2018</span></h3>						<div class="seriousslider-caption-text"><span><a href="podejscia.html">Obejrzyj</a></span></div>						<div class="seriousslider-caption-buttons">
-																																											</div>
-					</div><!--seriousslider-caption-inside-->
-				</div><!--seriousslider-caption-->
-								<div class="seriousslider-hloader"></div>
-				<figure class="seriousslider-cloader">
-					<svg width="200" height="200">
-						<circle cx="95" cy="95" r="20" transform="rotate(-90, 95, 95)"/>
-					</svg>
-			  </figure>
-			</div>
+.my-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
 
-			
-			<div class="item slide-2 ">
-								<a>
-					<img decoding="async" class="item-image" src="wp-content/uploads/2017/08/x1870x100-e1503014654260.jpg.pagespeed.ic.9tFuKq7ALG.jpg" alt="Cykl Uwiedzenie 2014/2015">
-				</a>
-												<div class="seriousslider-caption">
-					<div class="seriousslider-caption-inside">
-						<h3 class="seriousslider-caption-title"><span>Cykl Uwiedzenie 2014/2015</span></h3>						<div class="seriousslider-caption-text"><span><a href="uwiedzenie/index.html">Obejrzyj</a></span></div>						<div class="seriousslider-caption-buttons">
-																																											</div>
-					</div><!--seriousslider-caption-inside-->
-				</div><!--seriousslider-caption-->
-								<div class="seriousslider-hloader"></div>
-				<figure class="seriousslider-cloader">
-					<svg width="200" height="200">
-						<circle cx="95" cy="95" r="20" transform="rotate(-90, 95, 95)"/>
-					</svg>
-			  </figure>
-			</div>
+.my-slide img {
+  width: 100%;
+  display: block;
+}
 
-			
-			<div class="item slide-3 ">
-								<a>
-					<img decoding="async" class="item-image" src="wp-content/uploads/2017/08/x19325x425-e1503014692732.jpg.pagespeed.ic.WBIKUXK2ua.jpg" alt="Cykl Aury 2015">
-				</a>
-												<div class="seriousslider-caption">
-					<div class="seriousslider-caption-inside">
-						<h3 class="seriousslider-caption-title"><span>Cykl Aury 2015</span></h3>						<div class="seriousslider-caption-text"><span><a href="aury/index.html">Obejrzyj</a></span></div>						<div class="seriousslider-caption-buttons">
-																																											</div>
-					</div><!--seriousslider-caption-inside-->
-				</div><!--seriousslider-caption-->
-								<div class="seriousslider-hloader"></div>
-				<figure class="seriousslider-cloader">
-					<svg width="200" height="200">
-						<circle cx="95" cy="95" r="20" transform="rotate(-90, 95, 95)"/>
-					</svg>
-			  </figure>
-			</div>
+/* Dodajemy tekst na slajdzie */
+.my-slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
 
-			
-			<div class="item slide-4 ">
-								<a>
-					<img decoding="async" class="item-image" src="wp-content/uploads/2017/08/x670x50-e1503014721502.jpg.pagespeed.ic.5BUWdjHXDZ.jpg" alt="Cykl Przenikanie II">
-				</a>
-												<div class="seriousslider-caption">
-					<div class="seriousslider-caption-inside">
-						<h3 class="seriousslider-caption-title"><span>Cykl Przenikanie II</span></h3>						<div class="seriousslider-caption-text"><span><a href="przenikanie-ii/index.html">Obejrzyj</a></span></div>						<div class="seriousslider-caption-buttons">
-																																											</div>
-					</div><!--seriousslider-caption-inside-->
-				</div><!--seriousslider-caption-->
-								<div class="seriousslider-hloader"></div>
-				<figure class="seriousslider-cloader">
-					<svg width="200" height="200">
-						<circle cx="95" cy="95" r="20" transform="rotate(-90, 95, 95)"/>
-					</svg>
-			  </figure>
-			</div>
+/* Strzałki */
+.my-slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
 
-			
-			<div class="item slide-5 ">
-								<a>
-					<img decoding="async" class="item-image" src="wp-content/uploads/2017/08/x250x70-1-e1503014756935.jpg.pagespeed.ic.VH5jIPcoP9.jpg" alt="Cykl Przenikanie 2013">
-				</a>
-												<div class="seriousslider-caption">
-					<div class="seriousslider-caption-inside">
-						<h3 class="seriousslider-caption-title"><span>Cykl Przenikanie 2013</span></h3>						<div class="seriousslider-caption-text"><span><a href="przenikanie/index.html">Obejrzyj</a></span></div>						<div class="seriousslider-caption-buttons">
-																																											</div>
-					</div><!--seriousslider-caption-inside-->
-				</div><!--seriousslider-caption-->
-								<div class="seriousslider-hloader"></div>
-				<figure class="seriousslider-cloader">
-					<svg width="200" height="200">
-						<circle cx="95" cy="95" r="20" transform="rotate(-90, 95, 95)"/>
-					</svg>
-			  </figure>
-			</div>
+.my-slider-button.prev {
+  left: 10px;
+}
 
-			
-			<div class="item slide-6 ">
-								<a>
-					<img decoding="async" class="item-image" src="wp-content/uploads/2017/08/x170x50-1-e1503752871738.jpg.pagespeed.ic.8JVMF5SmoY.jpg" alt="Cykl Fanaberie 2012/2013">
-				</a>
-												<div class="seriousslider-caption">
-					<div class="seriousslider-caption-inside">
-						<h3 class="seriousslider-caption-title"><span>Cykl Fanaberie 2012/2013</span></h3>						<div class="seriousslider-caption-text"><span><a href="fanaberie/index.html">Obejrzyj</a></span></div>						<div class="seriousslider-caption-buttons">
-																																											</div>
-					</div><!--seriousslider-caption-inside-->
-				</div><!--seriousslider-caption-->
-								<div class="seriousslider-hloader"></div>
-				<figure class="seriousslider-cloader">
-					<svg width="200" height="200">
-						<circle cx="95" cy="95" r="20" transform="rotate(-90, 95, 95)"/>
-					</svg>
-			  </figure>
-			</div>
+.my-slider-button.next {
+  right: 10px;
+}
 
-						</div>
+/* Kropki */
+.my-slider-dots {
+  text-align: center;
+  margin-top: 10px;
+}
 
-			<div class="seriousslider-indicators">
-				<ol class="seriousslider-indicators-inside">
-										<li data-target="#serious-slider-4-rnd7476" data-slide-to="0" class="active"></li>
-										<li data-target="#serious-slider-4-rnd7476" data-slide-to="1"></li>
-										<li data-target="#serious-slider-4-rnd7476" data-slide-to="2"></li>
-										<li data-target="#serious-slider-4-rnd7476" data-slide-to="3"></li>
-										<li data-target="#serious-slider-4-rnd7476" data-slide-to="4"></li>
-										<li data-target="#serious-slider-4-rnd7476" data-slide-to="5"></li>
-									</ol>
-			</div>
+.my-slider-dots button {
+  background: #ccc;
+  border: none;
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
-			<button class="left seriousslider-control" data-target="#serious-slider-4-rnd7476" role="button" data-slide="prev">
-			  <span class="sicon-prev control-arrow" aria-hidden="true"></span>
-			  <span class="sr-only">Previous</span>
-			</button>
-			<button class="right seriousslider-control" data-target="#serious-slider-4-rnd7476" role="button" data-slide="next">
-			  <span class="sicon-next control-arrow" aria-hidden="true"></span>
-			  <span class="sr-only">Next</span>
-			</button>
-		</div>
-		
-							</div><!-- .entry-content -->
+.my-slider-dots button.active {
+  background: #333;
+}
+</style>
 
-			<link itemprop="mainEntityOfPage" href="index2a9c.html?page_id=9"/>		</div><!-- .article-inner -->
-	</article><!-- #post-## -->
-	
-	<section id="comments">
-	
-		</section><!-- #comments -->
+<div class="my-slider" id="mySlider">
+  <div class="my-slider-track">
+    <div class="my-slide">
+      <img src="wp-content/uploads/2017/08/CyklPodejscia.jpg" alt="">
+      <div class="my-slide-text">Cykl Podejścia 2017/2018</div>
+    </div>
+    <div class="my-slide">
+      <img src="wp-content/uploads/2017/08/CyklUwiedzenie.jpg" alt="">
+      <div class="my-slide-text">Cykl Uwiedzenie 2014/2015</div>
+    </div>
+    <div class="my-slide">
+      <img src="wp-content/uploads/2017/08/CyklAury.jpg" alt="">
+      <div class="my-slide-text">Cykl Aury 2015</div>
+    </div>
+    <div class="my-slide">
+      <img src="wp-content/uploads/2017/08/CyklPrzenikanieII.jpg" alt="">
+      <div class="my-slide-text">Cykl Przenikanie II</div>
+    </div>
+    <div class="my-slide">
+      <img src="wp-content/uploads/2017/08/CyklPrzenikanie.jpg" alt="">
+      <div class="my-slide-text">Cykl Przenikanie 2013</div>
+    </div>
+    <div class="my-slide">
+      <img src="wp-content/uploads/2017/08/CyklFanaberie.jpg" alt="">
+      <div class="my-slide-text">Cykl Fanaberie 2012/2013</div>
+    </div>
+  </div>
+
+  <button class="my-slider-button prev">&#10094;</button>
+  <button class="my-slider-button next">&#10095;</button>
+
+  <div class="my-slider-dots" id="sliderDots"></div>
+</div>
+
+<script>
+const slider = document.getElementById('mySlider');
+const track = slider.querySelector('.my-slider-track');
+const slides = slider.querySelectorAll('.my-slide');
+const prevBtn = slider.querySelector('.prev');
+const nextBtn = slider.querySelector('.next');
+const dotsContainer = document.getElementById('sliderDots');
+
+let currentIndex = 0;
+let slideCount = slides.length;
+let autoplayInterval = null;
+
+// Funkcje przesuwania
+function updateSliderPosition() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  updateDots();
+}
+
+function showNextSlide() {
+  currentIndex = (currentIndex + 1) % slideCount;
+  updateSliderPosition();
+}
+
+function showPrevSlide() {
+  currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+  updateSliderPosition();
+}
+
+// Autoplay
+function startAutoplay() {
+  autoplayInterval = setInterval(showNextSlide, 4000);
+}
+
+function stopAutoplay() {
+  clearInterval(autoplayInterval);
+}
+
+// Kropki
+function createDots() {
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement('button');
+    dot.addEventListener('click', () => {
+      currentIndex = i;
+      updateSliderPosition();
+      stopAutoplay();
+      startAutoplay();
+    });
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function updateDots() {
+  const dots = dotsContainer.querySelectorAll('button');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
+
+// Eventy
+nextBtn.addEventListener('click', () => {
+  showNextSlide();
+  stopAutoplay();
+  startAutoplay();
+});
+
+prevBtn.addEventListener('click', () => {
+  showPrevSlide();
+  stopAutoplay();
+  startAutoplay();
+});
+
+// Inicjalizacja
+createDots();
+updateSliderPosition();
+startAutoplay();
+
+// Aktualizacja szerokości slajdu po zmianie rozmiaru okna
+window.addEventListener('resize', () => {
+  updateSliderPosition();
+});
+</script>
 
 
-					</main><!-- #main -->
 
 		
 <aside id="primary" class="widget-area sidey" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
-	<nav id="sleft" class="socials"><a target="_blank" href="https://pl-pl.facebook.com/Katarzyna-Mol-Art-240182066070023/" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-509"><span>Katarzyna Mol Fanpage</span></a><a target="_blank" href="mailto:katarzynamol@interia.pl" class="email menu-item menu-item-type-custom menu-item-object-custom menu-item-502"><span>Napisz do mnie</span></a><a href="tel:502%20575%20675" class="phone3 menu-item menu-item-type-custom menu-item-object-custom menu-item-513"><span>tel: 502 575 675</span></a></nav><nav class="sidebarmenu"><ul id="menu-sidebar" class="menu"><li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item-20"><a href="index2a9c.html?page_id=9" aria-current="page">Obrazy</a></li>
-<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="indexcdf1.html?page_id=10">Wystawy</a></li>
-<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="index787c.html?page_id=11">O mnie</a></li>
-<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="index1df3.html?page_id=13">kontakt</a></li>
-<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="index8067.html?page_id=14">wydarzenia</a></li>
+	<nav id="sleft" class="socials"><a target="_blank" href="https://pl-pl.facebook.com/Katarzyna-Mol-Art-240182066070023/" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-509"><span>Katarzyna Mol Fanpage</span></a><a target="_blank" href="mailto:katarzynamol@interia.pl" class="email menu-item menu-item-type-custom menu-item-object-custom menu-item-502"><span>Napisz do mnie</span></a><a href="tel:502%20575%20675" class="phone3 menu-item menu-item-type-custom menu-item-object-custom menu-item-513"><span>tel: 502 575 675</span></a></nav><nav class="sidebarmenu"><ul id="menu-sidebar" class="menu">
+	<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item menu-item-20">
+	<a href="index2a9c.html" aria-current="page">Obrazy</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="indexcdf1.html">Wystawy</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="index787c.html">O mnie</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="index1df3.html">kontakt</a></li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="index8067.html">wydarzenia</a></li>
 </ul></nav>
 	
 	</aside>
