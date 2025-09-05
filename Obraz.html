@@ -114,7 +114,15 @@ var easy_fancybox_auto = function(){
 
 	</header><!-- #masthead -->
 
-	<div id="breadcrumbs-container" class="cryout two-columns-left"><div id="breadcrumbs-container-inside"><div id="breadcrumbs"> <nav id="breadcrumbs-nav" itemprop="breadcrumb"><a href="https://server848640.nazwa.pl/wordpress/wpn_kmol" title="Strona główna"><i class="icon-bread-home"></i><span class="screen-reader-text">Strona główna</span></a><i class="icon-bread-arrow"></i> <span class="current">Obrazy</span></nav></div></div></div><!-- breadcrumbs -->
+	<div id="breadcrumbs-container" class="cryout two-columns-left"><div id="breadcrumbs-container-inside"><div id="breadcrumbs"> <nav id="breadcrumbs-nav" itemprop="breadcrumb">
+	<a href="index.html" title="Strona główna">
+		<i class="icon-bread-home"></i><span class="screen-reader-text">Strona główna</span>
+	</a>
+	<a href="Obraz.html" title="Obrazy">
+	<i class="icon-bread-arrow"></i><span class="current" >Obrazy</span>
+	</a>
+	
+	</nav></div></div></div><!-- breadcrumbs -->
 	<div id="content" class="cryout">
 		
 	<div id="container" class="two-columns-left">
@@ -125,11 +133,14 @@ var easy_fancybox_auto = function(){
 <style>
 .my-slider {
   position: relative;
-  width: 70%;
-  max-width: 800px;
-  margin: 0 auto 0 auto; /* góra 0 */
+  height: 70vh;
+  aspect-ratio: 1 / 1;
+
+  margin: 5vh auto;
+
   overflow: hidden;
-  transform: scale(0.7);
+  /*transform: scale(0.8);*/
+  
   transform-origin: center center;
   align-self: flex-start !important; /* NA WSZELKI WYPADEK */
 }
